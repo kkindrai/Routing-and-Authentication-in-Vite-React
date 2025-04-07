@@ -1,6 +1,8 @@
 # How to Create a VITE React App
 
-## Create a new Vite
+## Guide Link: https://www.youtube.com/watch?v=qlOhj7lkbU0&ab_channel=PerryGovier 
+
+### Create a new Vite
 1. `npm create vite@latest`
    > Yes 
 2.  Select a Name
@@ -10,7 +12,7 @@
 6.  `npm install`
 7.  `npm run dev`
 
-## Install React Component Libraries
+### Install React Component Libraries
 1. `npm install aws-amplify @aws-amplify/ui-react antd react-router-dom`
 2. __Initialize new Amplfiy Project__ 
    1. `amplify init`
@@ -32,3 +34,18 @@
    3. >username
    4. No Advanced Settings
    5. Sync Progress: `amplify push`
+
+
+
+
+## Guide Link: https://www.youtube.com/watch?v=Inlw6Btl_Vc&ab_channel=PerryGovier
+
+### Building the App
+1. In your app, create the following files in the `src` directory
+   > Container.js
+    - Centers content on a page
+   > Nav.js
+   > Profile.js
+   > Protected.js
+   > Public.js
+   > Router.js
