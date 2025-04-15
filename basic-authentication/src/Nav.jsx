@@ -1,52 +1,80 @@
 /* src/Nav.js */
 // import React from 'react'
-import { Link } from 'react-router-dom'
+import { useEffet, useState } from 'react'
+
+import { Link, Outlet, useLocation } from 'react-router-dom'
 import { Menu } from 'antd'
 import { HomeOutlined, ProfileOutlined, FileProtectOutlined } from 
     '@ant-design/icons'
 
-const Nav = (props) => {
-    const { current } = props
 
-    const navLinks = [
-        {
-            key: "public",
-            label: (
-                <>
-                {/* <Link to="/"> */}
-                    <HomeOutlined/>
-                    Home
-                {/* </Link> */}
-                </>
-            )
-        },
-        {
-            key: "profile",
-            label: (
-                <>
-                {/* <Link to="/profile"> */}
-                    <ProfileOutlined/>
-                    Profile
-                {/* </Link> */}
-                </>
-            )
-        },
-        {
-            key: "protected",
-            label: (
-                <>
-                {/* <Link to="/protected"> */}
-                    <FileProtectOutlined/>
-                    Protected
-                {/* </Link> */}
-                </>
-            )
-        }
-    ];
+
+/**
+ * Global Nav Array
+ * Allows this to not need to be reloaded each time
+ */
+
+const navLinks = [
+    {
+        key: "public",
+        label: (
+            
+            <Link to="/">
+                <HomeOutlined/>
+                Home
+            </Link>
+        
+        )
+    },
+    {
+        key: "profile",
+        label: (
+            
+            <Link to="/profile">
+                <ProfileOutlined/>
+                Profile
+            </Link>
+            
+        )
+    },
+    {
+        key: "protected",
+        label: (
+            
+            <Link to="/protected">
+                <FileProtectOutlined/>
+                Protected
+            </Link>
+            
+        )
+    }
+];
+
+
+
+
+/**
+ * The Nav Component
+ * 
+ * @returns 
+ */
+const Nav = () => {
+    const [selected, setSelected] = useState('public');
+    const location = useLocation();
+
+    useEffect(() => {
+        const currentPage = location.pathname.split("/")[1];
+        console.log(location);
+
+        setSelection (currentPage ? currentPage : 'public')
+    }, [location])
+
+    
 
     return (
         <div>
-            <Menu items={navLinks} selectedKeys={[current]} mode="horizontal" />
+            <Menu items={navLinks} selectedKeys={[selected]} mode="horizontal" />
+            <Outlet/>
         </div>
     )
 } 
