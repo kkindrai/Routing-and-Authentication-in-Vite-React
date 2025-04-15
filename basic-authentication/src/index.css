@@ -11,6 +11,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Variable Colours */
+  --amplify-primary-color: #1890ff;
+  --amplify-primary-tint: #1890ff;
+  --amplify-primary-shade: #1890ff;
+
 }
 
 a {
