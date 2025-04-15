@@ -31,8 +31,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  justify-content: center;
+  min-width: 100vw;
   min-height: 100vh;
 }
 
@@ -71,4 +71,9 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+.ant-menu {
+  min-width: 100vw;
 }

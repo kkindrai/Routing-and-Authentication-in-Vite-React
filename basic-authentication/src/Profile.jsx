@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { fetchUserAttributes } from 'aws-amplify/auth'
-import { withAuthenticator } from 'aws-amplify/ui-react'
-import Container from './Container'
+import { withAuthenticator } from '@aws-amplify/ui-react'
+import Container from './Container.jsx'
 
 function Profile({signOut, user}) {
 
@@ -14,7 +14,7 @@ function Profile({signOut, user}) {
     async function checkUser() {
         try {
             const userAttributes = await fetchUserAttributes();
-            setCurrentSuser({...userAttributes, ...user})
+            setCurrentUser({...userAttributes, ...user})
         } catch (err) { console.error('error: ', err) }
     }
     return (

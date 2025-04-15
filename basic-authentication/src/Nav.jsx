@@ -1,6 +1,6 @@
 /* src/Nav.js */
 // import React from 'react'
-import { useEffet, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { Menu } from 'antd'
@@ -66,7 +66,7 @@ const Nav = () => {
         const currentPage = location.pathname.split("/")[1];
         console.log(location);
 
-        setSelection (currentPage ? currentPage : 'public')
+        setSelected (currentPage ? currentPage : 'public')
     }, [location])
 
     

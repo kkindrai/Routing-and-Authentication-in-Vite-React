@@ -1,6 +1,6 @@
 /* src/Public.js */
 import React from 'react'
-import Container from './Container'
+import Container from './Container.jsx'
 
 function Public() {
     return (

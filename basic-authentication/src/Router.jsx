@@ -1,5 +1,5 @@
 /* src/Router.jsx */
-import { Routers, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import Nav from './Nav'
 import Public from './Public'
