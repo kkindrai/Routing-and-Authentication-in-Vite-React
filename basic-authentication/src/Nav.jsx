@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { Menu } from 'antd'
-import { HomeOutlined, ProfileOutlined, FileProtectOutlined } from 
+import { HomeOutlined, ProfileOutlined, FileProtectOutlined, VideoCameraOutlined } from 
     '@ant-design/icons'
 
 
@@ -22,6 +22,17 @@ const navLinks = [
             <Link to="/">
                 <HomeOutlined/>
                 Home
+            </Link>
+        
+        )
+    },
+    {
+        key: "Content",
+        label: (
+            
+            <Link to="/content">
+                <VideoCameraOutlined />
+                Content
             </Link>
         
         )

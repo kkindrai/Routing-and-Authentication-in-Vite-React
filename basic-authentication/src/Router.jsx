@@ -5,6 +5,7 @@ import Nav from './Nav'
 import Public from './Public'
 import Profile from './Profile'
 import Protected from './Protected'
+import Content from './Content'
 
 const Router = () => {
     return (
@@ -13,6 +14,7 @@ const Router = () => {
             
                 <Route index element={<Public/>}/>
                 <Route path="/protected" element={<Protected/>}/>
+                <Route path="/content" element={<Content/>}/>
                 <Route path="/profile" element={<Profile/>}/>
                 <Route path="*" element={<Public/>}/>
             
